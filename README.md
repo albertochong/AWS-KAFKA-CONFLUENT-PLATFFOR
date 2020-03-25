@@ -13,7 +13,7 @@ Create Messaging environment with Kafka Confluent Paltform Multi broker on AWS m
 
 ### Create a Security Group
 
-* Create new security group with the name: ClsChongNameNodeGroup
+* Create new security group with the name: ClsKsqlChong
 ```bash
 Type              Protocol        Port        Source
 
