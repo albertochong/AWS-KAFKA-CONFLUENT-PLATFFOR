@@ -3,7 +3,7 @@ Cluster with 2 brokers in same server
 
 ### Run in terminal 
 
-* Download Kafka under home/user directory
+* Download Confluent under home/user directory
 ```bash
 wget packages.confluent.io/archive/5.4/confluent-5.4.1-2.12.tar.gz
 ```
