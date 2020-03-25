@@ -20,7 +20,7 @@ sudo mv confluent-5.4.1-2.120/ /opt
 ![alt text](https://achong.blob.core.windows.net/gitimages/confluent_folder.PNG)
 
 
-* Add kafka envirnoment variables under home/user
+* Add confluent envirnoment variables under home/user
 ```bash  
 nano .bash_profile
  
@@ -29,19 +29,17 @@ export CONFLUENT_HOME=/opt/confluent-5.4.1
 export PATH=$PATH:$CONFLUENT_HOME/bin
 ```     
 
-
-
 * Renitialize/Activate
 ```bash   
 source .bash_profile
 ``` 
  
-* Create broker 1.Go to <CONFLUENT_HOME> installation and config folder
+* Create broker 1.Go to <CONFLUENT_HOME>/etc/kafka installation.
 ```bash   
-cp  server1.properties  server1.properties
+cp  server.properties  server1.properties
 ``` 
 
-* Edit Broker 0.Go to <CONFLUENT_HOME> installation and config folder.
+* Edit Broker 0.Go to <CONFLUENT_HOME>/etc/kafka installation.
 ```bash   
 nano server.properties
 listeners=PLAINTEXT://ec2-3-17-3-207.us-east-2.compute.amazonaws.com:9092
@@ -58,16 +56,28 @@ log.dir=/tmp/kafka-logs1
 zookeeper.connect=localhost:2181
 ``` 
 
-* Putting  zookeeper(kafka is managed by zookeeper) running background.Go to<KAFKA_HOME> installation 
-```bash 
-nohup bin/zookeeper-server-start.sh config/zookeeper.properties > logs/zookeeper.log &
-tail -f logs/zookeeper.log (show lasts lines)
+* Install the Confluent CLI
+```bash   
+curl -L https://cnfl.io/cli | sh -s -- -b /$CONFLUENT_HOME/bin
 ``` 
 
-* Putting all brokers running background. Go to <KAFKA_HOME> installation
-```bash 
-nohup bin/kafka-server-start.sh config/server.properties > logs/broker.log &
-nohup bin/kafka-server-start.sh config/server1.properties > logs/broker1.log &
-tail -f logs/broker.log (show lasts lines)
-tail -f logs/broker1.log (show lasts lines)
+* Install Confluent Hub client
+```bash   
+wget http://client.hub.confluent.io/confluent-hub-client-latest.tar.gz?_ga=2.258297162.1562681204.1585092022-124618927.1584719496
 ``` 
+
+* unpack files
+```bash
+tar -xvf  confluent-hub-client-latest.tar
+```
+
+* move content of bin folder to /$CONFLUENT_HOME/bin
+```bash
+sudo mv confluent-hub/ /$CONFLUENT_HOME/bin
+```
+
+* Start platform
+```bash
+confluent local start
+```
+![alt text](https://achong.blob.core.windows.net/gitimages/start_confluent.PNG)
