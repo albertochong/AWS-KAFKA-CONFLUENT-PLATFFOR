@@ -81,3 +81,10 @@ sudo mv confluent-hub/ /$CONFLUENT_HOME/bin
 confluent local start
 ```
 ![alt text](https://achong.blob.core.windows.net/gitimages/start_confluent.PNG)
+
+
+* Start ksql
+```bash
+ksql
+```
+![alt text](https://achong.blob.core.windows.net/gitimages/ksql.PNG)
