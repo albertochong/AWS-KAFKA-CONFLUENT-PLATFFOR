@@ -20,7 +20,6 @@
 ```
 
 * Streams
-![alt text](https://achong.blob.core.windows.net/gitimages/streams.PNG) 
 ```bash
 0 - SET 'auto.offset.reset'= 'earliest'  ---------- to see all streams.If we close prompt,next time we should typping again
 
@@ -32,5 +31,5 @@
 3 - Query:
     select * from users_streams limit n
 ```
-
+![alt text](https://achong.blob.core.windows.net/gitimages/streams.PNG) 
 
