@@ -88,3 +88,13 @@ confluent local start
 ksql
 ```
 ![alt text](https://achong.blob.core.windows.net/gitimages/ksql.PNG)
+
+* Start Confluent center 
+```bash
+control-center-start /opt/confluent-5.4.1/etc/confluent-control-center/control-center.properties
+```
+![alt text]()
+
+
+
+
