@@ -35,4 +35,5 @@ SSH               TCP             22          Anywhere
   *  Testing producer messages to the topic
   *  Testing consumer messages from the topic
   
-
+## 3. KSQL
+  * Create streams, table
