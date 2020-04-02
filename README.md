@@ -37,6 +37,4 @@ SSH               TCP             22          Anywhere
   
 ## 3. KSQL
   * Create streams, table
-  
-## 4. Confluent Center
-  * 
+ 
