@@ -34,6 +34,7 @@ SSH               TCP             22          Anywhere
   *  Create,describe topic
   *  Testing producer messages to the topic
   *  Testing consumer messages from the topic
+  *  Create connector with JDBC to SQL instance
   
 ## 3. KSQL
   * Create streams, table
