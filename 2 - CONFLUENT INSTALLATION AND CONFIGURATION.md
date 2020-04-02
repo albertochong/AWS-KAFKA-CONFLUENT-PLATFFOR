@@ -82,6 +82,13 @@ confluent local start
 ```
 ![alt text](https://achong.blob.core.windows.net/gitimages/start_confluent.PNG)
 
+P.s:
+1 - If status is like this
+![alt text](https://achong.blob.core.windows.net/gitimages/connect_down.PNG)
+Check this property plugin.path = ...  on /etc/kafka/connect-distributed.properties and ./etc/kafka/connect-standalone.properties
+Should be plugin.path = <CONFLUENT_HOME>/share/java
+
+
 
 * Start ksql
 ```bash
