@@ -36,8 +36,9 @@ SSH               TCP             22          Anywhere
   *  Testing consumer messages from the topic
   *  Generate some data to topic
   *  List Kafka availables connectors
-  *  Create connector with JDBC to SQL instance
   
 ## 3. KSQL
   * Create streams, table
  
+## 4. My Kafka Source Connectors
+  * *  Create connector with JDBC to SQL instance
