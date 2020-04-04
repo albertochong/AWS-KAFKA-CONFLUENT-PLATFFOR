@@ -36,7 +36,7 @@ nano source-sqlserver-dbLisbonMetropolitan.properties
 
 
 * Check counting records on sql database and later check messages on kafka topic
-![alt text](https://achong.blob.core.windows.net/gitimages/load_source_connectoe_sql.PNG)
+![alt text](https://achong.blob.core.windows.net/gitimages/sql_server_buslisbon.PNG)
 
 
 
