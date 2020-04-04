@@ -22,13 +22,14 @@ confluent local list connectors
 ```bash
 1 - Download mssql-jdbc-7.2.1.jre8.jar from https://docs.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15
 
-2 - Put the JDBC driver in the same folder as the Kafka Connect JDBC plugin
+2 - Put the JDBC driver downloaded above in the same folder as the Kafka Connect JDBC plugin
     Should be <CONFLUENT_HOME>/shared/java
 
 3 - Restart the Kafka Connect worker
 ```
 
-* Go to <CONFLUENTE_HOME>/etc/kafka-connect-jdbc   and create your connecto to SQL SERVER instance to get data to topic
+* Go to <CONFLUENTE_HOME>/etc/kafka-connect-jdbc and create your connecto to SQL SERVER instance to get data to topic
 ```bash
 nano source-sqlserver-dbLisbonMetropolitan.properties
 ```
+![alt text](https://achong.blob.core.windows.net/gitimages/connector_source_sqlserevr.PNG)
