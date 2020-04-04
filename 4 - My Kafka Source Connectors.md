@@ -39,10 +39,14 @@ nano source-sqlserver-dbLisbonMetropolitan.properties
 ![alt text](https://achong.blob.core.windows.net/gitimages/sql_server_buslisbon.PNG)
 
 
-
-
 * Load connector
 ```bash
     confluent local load source-sqlserver-dbLisbonMetropolitan -- -d /opt/confluent-5.4.1/etc/kafka-connect-jdbc/source-sqlserver-dbLisbonMetropolitan.properties
 ```
 ![alt text](https://achong.blob.core.windows.net/gitimages/load_source_connectoe_sql.PNG)
+
+* Check connector status
+```bash
+  confluent local status source-sqlserver-dbLisbonMetropolitan
+```
+![alt text](https://achong.blob.core.windows.net/gitimages/sql_server_buslisbon_status.PNG)
