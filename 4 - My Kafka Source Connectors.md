@@ -1,6 +1,6 @@
 
 # My Kafka Source Connectors
-This part is dedicated to describe source connectors
+This part is dedicated to describe my own source connectors
 
 ## Create Kafka connector source to SQL SERVER
 Get data and write to topic first with bulkload and after incrememtal and update.
