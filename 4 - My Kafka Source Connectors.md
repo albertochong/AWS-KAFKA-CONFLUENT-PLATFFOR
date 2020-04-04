@@ -34,6 +34,13 @@ nano source-sqlserver-dbLisbonMetropolitan.properties
 ```
 ![alt text](https://achong.blob.core.windows.net/gitimages/connector_source_sqlserevr.PNG)
 
+
+* Check counting records on sql database and later check messages on kafka topic
+![alt text](https://achong.blob.core.windows.net/gitimages/load_source_connectoe_sql.PNG)
+
+
+
+
 * Load connector
 ```bash
     confluent local load source-sqlserver-dbLisbonMetropolitan -- -d /opt/confluent-5.4.1/etc/kafka-connect-jdbc/source-sqlserver-dbLisbonMetropolitan.properties
