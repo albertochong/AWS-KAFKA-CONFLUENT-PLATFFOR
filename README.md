@@ -41,4 +41,4 @@ SSH               TCP             22          Anywhere
   * Create streams, table
  
 ## 4. My Kafka Source Connectors
-  * *  Create connector with JDBC to SQL instance
+  * Create source connector with JDBC to SQL SERVER instance
