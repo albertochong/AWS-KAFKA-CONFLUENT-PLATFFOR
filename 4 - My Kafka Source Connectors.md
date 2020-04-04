@@ -50,3 +50,5 @@ nano source-sqlserver-dbLisbonMetropolitan.properties
   confluent local status source-sqlserver-dbLisbonMetropolitan
 ```
 ![alt text](https://achong.blob.core.windows.net/gitimages/sql_server_buslisbon_status.PNG)
+
+
