@@ -1,8 +1,7 @@
-![alt text](https://achong.blob.core.windows.net/gitimages/kfka_connect.jpg)
-
-
 # My Kafka Source Connectors
 This part is dedicated to describe my own source connectors
+
+![alt text](https://achong.blob.core.windows.net/gitimages/kfka_connect.jpg)
 
 ## Create Kafka connector source to SQL SERVER
 Get data and write to topic first with bulkload and after incrememtal and update.
