@@ -53,3 +53,5 @@ nano source-sqlserver-dbLisbonMetropolitan.properties
 ![alt text](https://achong.blob.core.windows.net/gitimages/sql_server_buslisbon_status.PNG)
 
 
+* Check messages on topic with Kafka tool 
+![alt text](https://achong.blob.core.windows.net/gitimages/kafkatool_.PNG)
