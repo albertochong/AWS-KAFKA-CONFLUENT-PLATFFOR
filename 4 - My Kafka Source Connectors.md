@@ -1,3 +1,5 @@
+![alt text](https://achong.blob.core.windows.net/gitimages/kfka_connect.jpg)
+
 
 # My Kafka Source Connectors
 This part is dedicated to describe my own source connectors
