@@ -41,9 +41,12 @@
     select * from users_streams limit n
     
 4 - Drop streams sintax:
-    drop streams if exixts users_streams delete topic;
+    drop stream if exixts users_streams delete topic_name;
 
 5 - describe stream_name; --------------- info about datatypes
+
+6 - DESCRIBE EXTENDED stream_name;------ 
+
 
 ```
 
