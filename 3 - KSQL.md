@@ -38,17 +38,29 @@
     show streams;
 
 3 - Query:
-    select * from users_streams limit n
+    select * from users_streams emit changes limit n
     
 4 - Drop streams sintax:
     drop stream if exixts users_streams delete topic_name;
 
 5 - describe stream_name; --------------- info about datatypes
 
-6 - DESCRIBE EXTENDED stream_name;------ 
+6 - DESCRIBE EXTENDED stream_name;------ describe stream in detail
 
 
 ```
+
+* Connectors
+```bash
+0 - show connetors; ---------- list all sourdes and sink connectors
+
+1 - DESCRIBE CONNECTOR conn1; ------------ describe connectors
+
+
+
+
+```
+
 
 
 ![alt text](https://achong.blob.core.windows.net/gitimages/streams.PNG) 
