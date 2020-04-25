@@ -32,6 +32,11 @@ confluent local list connectors
 * Go to <CONFLUENTE_HOME>/etc/kafka-connect-jdbc and create your connecto to SQL SERVER instance to get data to topic
 ```bash
 nano source-sqlserver-dbLisbonMetropolitan.properties
+Other option:
+mode=timestamp+incrementing
+timestamp.column.name=modified
+incrementing.column.name=id
+
 ```
 ![alt text](https://achong.blob.core.windows.net/gitimages/connector_source_sqlserevr.PNG)
 
