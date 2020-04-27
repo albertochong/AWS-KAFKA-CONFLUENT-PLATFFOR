@@ -56,7 +56,7 @@
 
 1 - DESCRIBE CONNECTOR conn1; ------------ describe connectors
 
-
+2 - DROP CONNECTOR connector_name -------- drop connector
 
 
 ```
