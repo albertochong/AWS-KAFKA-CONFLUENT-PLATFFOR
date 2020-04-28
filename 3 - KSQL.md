@@ -25,6 +25,10 @@
 2 - print 'topic_name'; -------------------------- print only all newest messages
     print 'topic_name' from beginning; ----------- print all messages
     print 'topic_name' from beginning limit n; --- print top n messages
+    
+3 - list properties;------------------------------ list configuration properties
+
+4 - list functions;------------------------------- list all UDF UDAF functions
 ```
 
 * Streams
@@ -47,20 +51,32 @@
 
 6 - DESCRIBE EXTENDED stream_name;------ describe stream in detail
 
-
 ```
 
 * Connectors
 ```bash
-0 - show connetors; ---------- list all sourdes and sink connectors
+0 - show connetors; ---------- list all sourdcs and sink connectors
 
 1 - DESCRIBE CONNECTOR conn1; ------------ describe connectors
 
 2 - DROP CONNECTOR connector_name -------- drop connector
 
+```
+
+* Tables
+```bash
+0 - show Tables; ---------- list all tables
+
+1 - DESCRIBE Table tbl; ------------ describe tables
+
+2 - DROP TABLE tbl_name -------- drop table
 
 ```
 
+* Logs
+```bash
+confluent log ksql-server  -f   -------- check  last lines
+```
 
 
 ![alt text](https://achong.blob.core.windows.net/gitimages/streams.PNG) 
