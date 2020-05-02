@@ -75,7 +75,7 @@
 
 * Logs
 ```bash
-confluent log ksql-server  -f   -------- check  last lines
+confluent local log ksql-server  -f   -------- check  last lines
 ```
 
 
