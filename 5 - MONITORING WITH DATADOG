@@ -1,1 +1,105 @@
+# Monitoring Confluent Platform with Datadog
+Datadog has had an Apache Kafka® integration for monitoring self-managed broker installations (and associated Apache ZooKeeper™ deployments) with their Datadog Agent for several years. The Confluent Platform integration adds several new capabilities:
+
+Monitoring for Kafka Connect, ksqlDB, Confluent Schema Registry, and Confluent REST Proxy
+Monitoring for Java-based Kafka clients
+Default Confluent Platform dashboard with the most critical metrics
+
+### Run in terminal 
+
+* Download YUM packages for the Datadog Agent 
+```bash
+DD_AGENT_MAJOR_VERSION=7 DD_API_KEY=2baf15719c4e20c4903477d8da0002e7 bash -c "$(curl -L https://raw.githubusercontent.com/DataDog/datadog-agent/master/cmd/agent/install_script.sh)"
+```
+
+* Start Agent
+```bash
+sudo systemctl start datadog-agent
+```
+
+
+* Checking some properties go to
+```bash
+cd /etc/datadog-agent/datadog.yaml
+cd /etc/datadog-agent/conf.d/ metrics.yaml
+```
+
+* To stop if wish
+```bash
+sudo service datadog-agent stop
+```
+
+
+
+ 
+* Create broker 1.Go to <CONFLUENT_HOME>/etc/kafka installation.
+```bash   
+cp  server.properties  server1.properties
+``` 
+
+* Edit Broker 0.Go to <CONFLUENT_HOME>/etc/kafka installation.
+```bash   
+nano server.properties
+listeners=PLAINTEXT://ec2-3-17-3-207.us-east-2.compute.amazonaws.com:9092
+log.dir=/tmp/kafka-logs
+zookeeper.connect=localhost:2181
+``` 
+
+* Edit Broker 1.Go to <KAFKA_HOME> installation and config folder.
+```bash   
+nano server1.properties
+broker.id=1
+listeners=PLAINTEXT://ec2-3-17-3-207.us-east-2.compute.amazonaws.com:9093
+log.dir=/tmp/kafka-logs1
+zookeeper.connect=localhost:2181
+``` 
+
+* Install the Confluent CLI
+```bash   
+curl -L https://cnfl.io/cli | sh -s -- -b /$CONFLUENT_HOME/bin
+``` 
+
+* Install Confluent Hub client
+```bash   
+wget http://client.hub.confluent.io/confluent-hub-client-latest.tar.gz?_ga=2.258297162.1562681204.1585092022-124618927.1584719496
+``` 
+
+* unpack files
+```bash
+tar -xvf  confluent-hub-client-latest.tar
+```
+
+* move content of bin folder to /$CONFLUENT_HOME/bin
+```bash
+sudo mv confluent-hub/ /$CONFLUENT_HOME/bin
+```
+
+* Start platform
+```bash
+confluent local start
+```
+![alt text](https://achong.blob.core.windows.net/gitimages/start_confluent.PNG)
+
+P.S:
+1 - If status is like this
+![alt text](https://achong.blob.core.windows.net/gitimages/connect_down.PNG)
+Check this property plugin.path = ...    on  <CONFLUENT_HOME>/etc/kafka/connect-distributed.properties and ./etc/kafka/connect-standalone.properties
+Should be plugin.path = <CONFLUENT_HOME>/share/java
+
+
+* Start ksql
+```bash
+ksql
+```
+![alt text](https://achong.blob.core.windows.net/gitimages/ksql.PNG)
+
+* Start Confluent center 
+```bash
+control-center-start /opt/confluent-5.4.1/etc/confluent-control-center/control-center.properties
+```
+![alt text]()
+
+
+
+
 
