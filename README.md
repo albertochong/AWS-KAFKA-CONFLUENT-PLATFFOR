@@ -43,6 +43,4 @@ SSH               TCP             22          Anywhere
 ## 4. My Kafka Source Connectors
   * Create source connector with JDBC to SQL SERVER instance
   
-## 5.Monitoring Confluent Platform with Datadog
-  * Installation and Configuration
   
