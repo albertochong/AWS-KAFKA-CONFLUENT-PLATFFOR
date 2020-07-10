@@ -1,5 +1,5 @@
 # AWS-KAFKA-CONFLUENT-PLATFORM
-Create streaming processing of log commit environment with Kafka Confluent Paltform Multi broker on AWS machine
+Create real-time data platform with Kafka Confluent Paltform Multi broker on AWS machine
 
 
 ## Create 1 Instance (t2.Xlarge) with the options
