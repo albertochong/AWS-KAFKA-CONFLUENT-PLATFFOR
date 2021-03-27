@@ -16,10 +16,14 @@ Create real-time data platform with Kafka Confluent Paltform Multi broker on AWS
 * Create new security group with the name: ClsKsqlChong
 ```bash
 Type              Protocol        Port        Source
-
 All Traffic       All             0 - 65535   Anywhere   
-
 SSH               TCP             22          Anywhere
+CUSTOM TCP        TCP             2181        Anywhere
+CUSTOM TCP        TCP             2888        Anywhere
+CUSTOM TCP        TCP             3888        Anywhere
+CUSTOM TCP        TCP             9092        Anywhere
+CUSTOM TCP        TCP             8083        Anywhere
+CUSTOM TCP        TCP             8088       Anywhere
 ```
 
 ## 1. Step: Install some tools
